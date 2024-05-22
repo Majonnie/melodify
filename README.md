@@ -2,10 +2,10 @@
 
 ### Besoins de l'application
 
-Melodify est une application d'apprentissage de vocabulaire de la musique pour les enfants.
-À l'aide d'images et de sons (si le temps le permet), l'utilisateur devra reconnaître l'instrument de musique représenté.
-L'application devra être responsive, avoir un design simple mais propre, et utiliser les technologies demandées (cf. _Exigences techniques_).
-La gestion des assets et le CRUD des exercices devra être maîtrisé.
+Melodify est une application d'apprentissage de vocabulaire de la musique pour les enfants.<br>
+À l'aide d'images et de sons (si le temps le permet), l'utilisateur devra reconnaître l'instrument de musique représenté.<br>
+L'application devra être responsive, avoir un design simple mais propre, et utiliser les technologies demandées (cf. _Exigences techniques_).<br>
+La gestion des assets et le CRUD des exercices devront être maîtrisés.
 
 ### Exigences techniques
 
