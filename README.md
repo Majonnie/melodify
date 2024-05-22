@@ -1,31 +1,24 @@
-# melodify
+# README
 
-### Besoins de l'application
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Melodify est une application d'apprentissage de vocabulaire de la musique pour les enfants.<br>
-À l'aide d'images et de sons (si le temps le permet), l'utilisateur devra reconnaître l'instrument de musique représenté.<br>
-L'application devra être responsive, avoir un design simple mais propre, et utiliser les technologies demandées (cf. _Exigences techniques_).<br>
-La gestion des assets et le CRUD des exercices devront être maîtrisés.
+Things you may want to cover:
 
-### Exigences techniques
+* Ruby version
 
-Melodify est un projet personnel servant de support à l'apprentissage des technologies suivantes :
+* System dependencies
 
-- Rails 7
-- Ruby 3.1
-- Hotwire
-- Tailwind (en priorité devant Bootstrap)
+* Configuration
 
-L'application possèdera une version utilisant Tailwind, et l'autre Bootstrap (deux branches distinctes).
+* Database creation
 
-### Installation
+* Database initialization
 
-DDD
-DD
+* How to run the test suite
 
-### Configuration et base du projet
+* Services (job queues, cache servers, search engines, etc.)
 
-DDD
-DD
+* Deployment instructions
 
-### Suite.....
+* ...
