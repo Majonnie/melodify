@@ -18,5 +18,10 @@ module Melodify
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Use Slim for all generators
+    config.generators do |g|
+      g.template_engine :slim
+    end
   end
 end
