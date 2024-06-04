@@ -5,15 +5,17 @@ header.w-full.flex.flex-col.justify-around.items-center
       ul.w_full.flex.justify-around.items-center.border
         - if current_user
           li.w-full.text-center.border-2
-            = 'Instruments'
+            = link_to 'Instruments', instruments_path
           li.w-full.text-center.border-2
-            = 'Exercises'
+            = link_to 'Exercises', exercises_path
           li.w-full.text-center.border-2
-            = 'My Profile'
+            = link_to current_user.first_name.to_s + 'My Profile', user_path(current_user)
           li.w-full.text-center.border-2
-            = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-logout'
+            = button_to 'Logout', destroy_user_session_path, method: :delete
+
+            /= link_to 'Logout', destroy_user_session_path, class: 'btn btn-logout'
         - else
           li.w-full.text-center.border-2
-            = link_to 'Register', new_user_path, method: :put, class: 'btn btn-register'
+            = link_to 'Register', new_user_registration_path, class: 'btn btn-register'
           li.w-full.text-center.border-2
-            = link_to 'Login', new_user_session_path, method: :put, class: 'btn btn-login'
+            = link_to 'Login', new_user_session_path, class: 'btn btn-login'

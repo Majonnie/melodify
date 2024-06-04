@@ -1,0 +1,8 @@
+- if @user.id == current_user.id
+  h1 My Profile
+- else
+  h1 Users#show
+
+p Find me in app/views/users/show.html.slim
+
+= link_to 'Edit Profile', edit_registration_path(@user)
