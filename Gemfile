@@ -56,6 +56,7 @@ gem 'pg'
 gem 'tailwindcss-rails'
 gem 'sass-rails'
 gem 'jsbundling-rails'
+gem 'cssbundling-rails'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
