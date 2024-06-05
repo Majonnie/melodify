@@ -23,5 +23,8 @@ module Melodify
     config.generators do |g|
       g.template_engine :slim
     end
+
+    # Somehow helps Tailwind to wake up
+    config.assets.debug = true
   end
 end
