@@ -1,2 +1,19 @@
-h1 Exercises#show
-p Find me in app/views/exercises/show.html.slim
+= turbo_frame_tag 'show_exercise'
+  .exercise-show.shadow-md.rounded.px-8.pt-6.pb-8.mb-4
+
+    h1.tracking-wide.text-2xl.font-bold.tracking-tight.text-gray-900.md:text-3xl
+      span.text-transparent.bg-clip-text.bg-gradient-to-tr.to-blue-500.from-blue-700
+        = @exercise.title[0]
+      = @exercise.title.slice(1, @exercise.title.length)
+
+    = turbo_frame_tag "question"
+    /  = render "exercises/question", instrument: @exercise.instruments.first
+
+    p.mb-6
+      i
+        = "created by #{@exercise.author.full_name}"
+
+    = turbo_frame_tag 'edit_exercise'
+      = link_to 'Edit Exercise', edit_exercise_path(@exercise),
+              class: 'mr-6 bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 mt-6 rounded focus:outline-none focus:shadow-outline',
+              data: { turbo_frame: "edit_exercise" }
