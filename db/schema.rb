@@ -39,20 +39,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_23_123731) do
     t.index ["user_id"], name: "index_grades_on_user_id"
   end
 
-  create_table "instrument_images", force: :cascade do |t|
-    t.bigint "instrument_id", null: false
-    t.string "image", limit: 255
+  create_table "images", force: :cascade do |t|
+    t.string "imageable_type", null: false
+    t.bigint "imageable_id", null: false
+    t.string "image_file", limit: 255
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["instrument_id"], name: "index_instrument_images_on_instrument_id"
-  end
-
-  create_table "instrument_sounds", force: :cascade do |t|
-    t.bigint "instrument_id", null: false
-    t.string "sound", limit: 255
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["instrument_id"], name: "index_instrument_sounds_on_instrument_id"
+    t.index ["imageable_type", "imageable_id"], name: "index_images_on_imageable"
   end
 
   create_table "instruments", force: :cascade do |t|
@@ -63,6 +56,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_23_123731) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_instruments_on_user_id"
+  end
+
+  create_table "sounds", force: :cascade do |t|
+    t.bigint "instrument_id", null: false
+    t.string "sound_file", limit: 255
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["instrument_id"], name: "index_sounds_on_instrument_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -84,7 +85,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_05_23_123731) do
   add_foreign_key "exercises", "users", column: "author_id"
   add_foreign_key "grades", "exercises"
   add_foreign_key "grades", "users"
-  add_foreign_key "instrument_images", "instruments"
-  add_foreign_key "instrument_sounds", "instruments"
   add_foreign_key "instruments", "users"
+  add_foreign_key "sounds", "instruments"
 end

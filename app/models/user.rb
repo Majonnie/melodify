@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :authored_exercises, class_name: 'Exercise', foreign_key: 'author_id'
+
   def full_name
     "#{self.first_name} #{self.last_name}"
   end
