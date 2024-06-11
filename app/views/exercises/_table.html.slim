@@ -1,0 +1,17 @@
+.exercise-table.relative.overflow-x-auto
+  .shadow.overflow-hidden.rounded.border-b.border-gray-200
+    table.min-w-full.bg-white
+      thead.text-xs.text-gray-700.uppercase.bg-gray-50.dark:bg-gray-700.dark:text-gray-400
+        tr
+          th#exercises-title.text-left.py-3.px-6.uppercase.font-semibold.text-sm.hover:cursor-pointer scope='col'
+            = 'Title'
+          th#exercises-created_at.text-left.py-3.px-6.uppercase.font-semibold.text-sm.hover:cursor-pointer scope='col'
+            = 'Created'
+
+      tbody.text-gray-700.dark:text-gray-300
+        - exercises.each do |exercise|
+          tr.odd:bg-white.odd:dark:bg-gray-900.even:bg-blue-50.even:dark:bg-table-dark-blue.border-b scope='row'
+            td.text-left.py-3.px-6
+              = exercise.title
+            td.text-left.py-3.px-6
+              = exercise.created_at.strftime('%a %d %b %Y')

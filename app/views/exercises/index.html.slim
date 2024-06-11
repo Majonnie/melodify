@@ -4,8 +4,7 @@
 
   .exercise-list.flex.flex-wrap.items-center.justify-around
     - if @exercises.any?
-      - @exercises.each do |exercise|
-        = render 'exercises/card', exercise: exercise
+        = render 'exercises/table', exercises: @exercises
     - else
       p
         = 'No exercise found ¯\_(ツ)_/¯'

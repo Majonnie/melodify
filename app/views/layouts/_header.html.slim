@@ -1,7 +1,10 @@
 header.w-full.flex.flex-col.justify-around.items-center
   h1.m-6.w-full.text-center.text-3xl.sm:text-4xl.text-transparent.bg-clip-text.bg-gradient-to-tr.to-cyan-500.from-blue-600
     = 'MELODIFY'
-  hr.h-0.5.border-t-0.bg-red-100.dark:bg-white/10
+
+  button#theme-toggle-btn.w-full.mt-4.text-sm.font-medium.text-center.text-gray-500
+    = 'WOAUH'
+
   nav.w-full.mt-4.text-sm.font-medium.text-center.text-gray-500.border-gray-200.dark:text-gray-400.dark:border-gray-700
     ul.w_full.flex.justify-around.items-center.mb-px
       - if current_user

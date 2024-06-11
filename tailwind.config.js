@@ -6,5 +6,13 @@ module.exports = {
     './app/assets/stylesheets/**/*.css',
     './app/javascript/**/*.js',
     './components/**/*.{html,js}'
-  ]
+  ],
+  darkMode: 'class', // Ensure this is set to 'class'
+  theme: {
+    extend: {
+      colors: {
+        'table-dark-blue': '#2b4779',
+      },
+    },
+  },
 }
