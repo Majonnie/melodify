@@ -3,8 +3,6 @@ document.addEventListener("turbo:load", function() {
     document.body.className = currentTheme;
 
     function toggleTheme() {
-        console.log('[TEMP] toggleTheme called');
-
         const newTheme = document.body.className === 'light' ? 'dark' : 'light';
         document.body.className = newTheme;
         localStorage.setItem('theme', newTheme);

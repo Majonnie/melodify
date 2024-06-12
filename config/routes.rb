@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :instruments
   resources :exercises do
+    collection do
+      get 'list'
+    end
     member do
       get 'next_instrument/:instrument_id', to: 'exercises#next_instrument', as: 'next_instrument'
       get 'previous_instrument/:instrument_id', to: 'exercises#previous_instrument', as: 'previous_instrument'

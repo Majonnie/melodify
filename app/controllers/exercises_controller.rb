@@ -3,6 +3,12 @@ class ExercisesController < ApplicationController
     @exercises = Exercise.all
   end
 
+  def list
+    #pass asc/desc as parameter
+    exercises = Exercise.order("#{params[:column]} #{params[:direction]}")
+    render(partial: 'table', locals: { exercises: exercises })
+  end
+
   def show
     @exercise = Exercise.find params[:id]
   end
