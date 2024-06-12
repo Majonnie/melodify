@@ -1,2 +1,5 @@
 h1 Exercises#edit
 p Find me in app/views/exercises/edit.html.slim
+
+= turbo_frame_tag 'edit_exercise'
+    = render 'exercises/form', exercise: @exercise

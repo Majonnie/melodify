@@ -1,0 +1,7 @@
+exercise-card.max-w-sm.w-56.rounded.overflow-hidden.shadow-lg.m-2.flex.flex-col.items-center
+  .px-6.py-4.text-center
+    h2.font-bold.text-xl
+      = exercise.title
+
+  .px-6.pb-2
+    = link_to 'See exercise', exercise_path(exercise), class: 'inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2'

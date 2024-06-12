@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @user = User.find(params[:id])
+    @user = User.find params[:id]
   end
 
   def edit
@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to user_profile_path(@user), notice: 'Profile updated successfully.'
+      redirect_to user_profile_path(@user), notice: 'User updated successfully.'
     else
       render :edit
     end
