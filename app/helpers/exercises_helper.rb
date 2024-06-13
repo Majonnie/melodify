@@ -1,8 +1,6 @@
 module ExercisesHelper
   def sort_link(column:, label:)
-
     link_to(label, list_exercises_path(column: column, direction: next_direction))
-    #link_to('TEST TRI', list_exercises_path(column: column))
   end
 
   def next_direction
