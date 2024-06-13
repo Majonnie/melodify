@@ -5,6 +5,9 @@ header.w-full.flex.flex-col.justify-around.items-center
   button#theme-toggle-btn.w-full.mt-4.text-sm.font-medium.text-center.text-gray-500
     = 'WOAUH'
 
+  div data-controller="theme"
+    button data-action="click->theme#toggleTheme" WAHOU AGAIN
+
   nav.w-full.mt-4.text-sm.font-medium.text-center.text-gray-500.border-gray-200.dark:text-gray-400.dark:border-gray-700
     ul.w_full.flex.justify-around.items-center.mb-px
       - if current_user
