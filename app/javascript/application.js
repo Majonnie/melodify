@@ -5,14 +5,13 @@ import "@hotwired/turbo-rails"
 import { Application } from "@hotwired/stimulus"
 
 // Custom modules
-import "./theme"
-import Theme_controller from "./theme_controller";
+import ThemeController from "./theme_controller";
 
 // Initialize Stimulus
 const application = Application.start()
 
 // Manually register controllers
-application.register("theme", Theme_controller)
+application.register("theme", ThemeController)
 
 // Turbo event listener
 document.addEventListener("turbo:frame-load", function(event) {

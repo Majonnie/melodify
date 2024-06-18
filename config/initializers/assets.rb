@@ -11,7 +11,10 @@ Rails.application.config.assets.version = "1.0"
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
+Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'builds')
+Rails.application.config.assets.precompile += %w( application.js )
+Rails.application.config.assets.precompile += %w( main.scss )
+
 # Load fonts
 Rails.application.config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
 Rails.application.config.assets.precompile += %w[*.svg *.eot *.woff *.woff2 *.ttf *.otf]
-Rails.application.config.assets.precompile += %w( main.scss )
