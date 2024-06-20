@@ -1,8 +1,8 @@
 .exercise-index.shadow-md.rounded.px-8.pt-6.pb-8.mb-4
-  h1.text-center
+  h1.text-center.dark:text-gray-400.mb-4
     = '- Avalaible Exercises -'
 
-  .exercise-list.flex.flex-wrap.items-center.justify-around
+  .exercise-list.flex.flex-wrap.items-center.justify-around.mb-8
     - if @exercises.any?
         = render 'exercises/table', exercises: @exercises
     - else

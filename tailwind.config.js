@@ -15,6 +15,9 @@ module.exports = {
       },
       borderWidth: {
         '6': '6px'  // Add a custom 6px border width
+      },
+      inset: {
+        '85': '85%',  // This creates the class `left-85`
       }
     },
   },

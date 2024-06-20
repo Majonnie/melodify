@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   get 'pages/index'
 
   resources :users, only: [:show]
-  resources :instruments
+  resources :instruments do
+    collection do
+      get 'list'
+    end
+  end
   resources :exercises do
     collection do
       get 'list'
