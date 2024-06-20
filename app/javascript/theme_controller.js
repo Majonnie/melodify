@@ -13,7 +13,6 @@ export default class extends Controller {
     toggleTheme() {
         const oldTheme = document.body.classList.contains('light') ? 'light' : 'dark';
         const newTheme = document.body.classList.contains('light') ? 'dark' : 'light';
-        console.log();
         this.toggleIcon(this.themeIconTarget, oldTheme, newTheme);
         document.body.classList.remove(oldTheme);
         document.body.classList.add(newTheme);
