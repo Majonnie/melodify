@@ -1,6 +1,6 @@
 - if current_user
   = link_to 'My Profile', user_path(current_user), class: 'mx-2 lg:w-auto bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
-  = button_to 'Logout', destroy_user_session_path, method: :delete, form: {class: 'm-0'}, class: 'mx-2 lg:w-auto bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+  = button_to 'Logout', destroy_user_session_path, method: :delete, form: {class: 'm-0 p-0'}, class: 'w-full lg:w-auto bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
 - else
   = link_to 'Register', new_user_registration_path, class: 'mx-2 lg:w-auto bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
   = link_to 'Login', new_user_session_path, class: 'mx-2 lg:w-auto bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
