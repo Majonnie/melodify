@@ -10,8 +10,10 @@ html
     script src="https://kit.fontawesome.com/2ca27ca8e3.js" crossorigin="anonymous"
   body.w-full.min-h-screen.dark:bg-gray-800.m-0.p-0
     = render 'layouts/header', user: @user
-    p.notice = notice
-    p.alert = alert
+    - if notice
+      p.notice.p-4.dark:bg-gray-800.dark:text-gray-400 = notice
+    - if alert
+      p.alert.p-4.dark:bg-gray-800.dark:text-gray-400 = alert
 
     .wrapper.w-full.h-full.p-4.dark:bg-gray-800.flex.flex-col
       = yield
