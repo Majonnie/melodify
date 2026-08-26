@@ -1,0 +1,9 @@
+/ TODO, mutualize with error messages in Devise forms
+
+- if object.errors.any?
+  div
+    h2
+      = "#{object.errors.count} error(s) prevented this form from being submitted:"
+    ul
+      - object.errors.full_messages.each do |message|
+        li = message

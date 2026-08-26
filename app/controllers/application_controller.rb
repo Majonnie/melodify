@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  #before_action -> { sleep 5 }
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected

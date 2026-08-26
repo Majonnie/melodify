@@ -1,10 +1,9 @@
-header.w-full.flex.flex-col.justify-between.items-center.dark:bg-gray-800 data-controller="burger_menu"
-  .flex.items-center.w-full.justify-self-center.justify-between.items-center.p-6
-    .center
-      h1.text-left.text-3xl.sm:text-4xl.text-transparent.bg-clip-text.bg-gradient-to-tr.to-cyan-500.from-blue-600
-        = 'MELODIFY'
+header.w-full.dark:bg-gray-800 data-controller="burger_menu"
+  .flex.w-full.justify-between.items-center.p-6
+    h1.text-left.text-3xl.sm:text-4xl.text-transparent.bg-clip-text.bg-gradient-to-tr.to-cyan-500.from-blue-600
+      = 'MELODIFY'
 
-    .right.w-fit.flex.justify-around.items-center
+    .w-fit.flex.items-center
       / Burger menu (user related pages/actions)
       button[data-collapse-toggle="navbar-default" data-action="click->burger_menu#toggleMenu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false"]
         span.sr-only

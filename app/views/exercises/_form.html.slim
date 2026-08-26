@@ -1,3 +1,5 @@
+/ TODO, use form_with with custom form builder and form errors partial (OR use Simple Form everywhere)
+
 = simple_form_for @exercise, remote: true, html: { multipart: true } do |form|
   = form.input :title, label: 'Title'
 
@@ -7,8 +9,3 @@
   /    p waouh
 
   = form.button :submit, class: 'mr-6 bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 mt-6 rounded focus:outline-none focus:shadow-outline'
-
-  - if @exercise.errors.any?
-    / Error messages
-    p
-      = @exercise.errors.first

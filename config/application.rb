@@ -18,6 +18,7 @@ module Melodify
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.autoload_paths << Rails.root.join("app/form_builders")
 
     # Use Slim for all generators
     config.generators do |g|
@@ -26,5 +27,8 @@ module Melodify
 
     # Somehow helps Tailwind to wake up
     config.assets.debug = true
+
+    # Use custom TailwindFormBuilder globally
+    config.action_view.default_form_builder = "TailwindFormBuilder"
   end
 end

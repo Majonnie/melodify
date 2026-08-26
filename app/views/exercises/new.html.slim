@@ -1,2 +1,20 @@
 h1 Exercises#new
-p Find me in app/views/exercises/new.html.slim
+
+/ TODO, move form to partial, shared with edit view
+
+= render "shared/form_errors", object: @exercise
+
+= form_with model: @exercise do |form|
+  div
+    = form.label :title
+    = form.text_field :title
+  / FIXME, author should always be current_user, no need for that field
+  div
+    = form.label :author
+    = form.collection_select :author_id,
+      User.all,
+      :id,
+      :full_name
+  div
+    = form.submit
+p Find me in app/views/exercises/new.html.slim 

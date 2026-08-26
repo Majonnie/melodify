@@ -66,6 +66,8 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-rails'
   gem 'pry-remote'
+  gem 'rspec-rails', '~> 7.0.0'
+  gem 'factory_bot_rails'
 end
 
 group :development do

@@ -1,14 +1,20 @@
-.user-show.shadow-md.rounded.px-8.pt-6.pb-8.mb-4
+.user-show.w-3/4.self-center.justify-self-center.shadow-md.rounded.px-8.pt-6.pb-8.mb-4.dark:bg-gray-800
   - if @user.id == current_user.id
-    h1.text-center
+    h1.text-2xl.text-center.dark:text-gray-400
       = '- My Profile -'
 
-  h1.tracking-wide.text-2xl.font-bold.tracking-tight.text-gray-900.md:text-3xl
-    span.text-transparent.bg-clip-text.bg-gradient-to-tr.to-blue-500.from-blue-700
-      = @user.full_name[0]
-    = @user.full_name.slice(1, @user.full_name.length)
+  - if @user.first_name || @user.last_name
+    h1.tracking-wide.text-2xl.font-bold.tracking-tight.md:text-3xl.dark:text-gray-400
+      span.text-transparent.bg-clip-text.bg-gradient-to-tr.to-blue-500.from-blue-700
+        = @user.full_name[0]
+      = @user.full_name.slice(1, @user.full_name.length)
+  - else
+    h1.tracking-wide.text-2xl.font-bold.tracking-tight.md:text-3xl.dark:text-gray-400
+      span.text-transparent.bg-clip-text.bg-gradient-to-tr.to-blue-500.from-blue-700
+        | [No
+      |  username]
 
-  p.mb-6
+  p.my-6.dark:text-gray-400
     = "Member since : #{@user.created_at.strftime('%a %d %b %Y')}"
 
 
